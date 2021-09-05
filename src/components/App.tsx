@@ -9,7 +9,7 @@ function App() {
       </header>
 
       <main>
-        <button onClick={throwError}>Button</button>
+        <button onClick={throwError}>Button updated</button>
       </main>
     </div>
   );
