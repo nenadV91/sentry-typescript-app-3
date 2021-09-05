@@ -1,5 +1,5 @@
 const throwError = () => {
-  throw new Error("This is my error 2!!!");
+  throw new Error("This is my error foo!!!");
 };
 
 export default throwError;
