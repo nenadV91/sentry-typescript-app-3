@@ -1,4 +1,5 @@
 import './App.css';
+import throwError from '../utils/throwError';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       </header>
 
       <main>
-        <button>Button</button>
+        <button onClick={throwError}>Button</button>
       </main>
     </div>
   );
