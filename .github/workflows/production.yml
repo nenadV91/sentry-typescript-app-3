@@ -52,4 +52,3 @@ jobs:
           sourcemaps: './build/static/js'
           set_commits: 'auto'
           version: ${{ steps.get_version.outputs.VERSION }}
-          version_prefix: 'v'
