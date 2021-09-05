@@ -40,6 +40,7 @@ jobs:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+      - uses: actions/checkout@v2
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -52,4 +53,3 @@ jobs:
           set_commits: 'auto'
           version: ${{ steps.get_version.outputs.VERSION }}
           version_prefix: 'v'
-      - uses: actions/checkout@v2
