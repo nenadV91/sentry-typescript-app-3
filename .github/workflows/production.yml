@@ -37,7 +37,9 @@ jobs:
         with:
           args: deploy --dir=build --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-      - uses: actions/checkout@v2
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -47,3 +49,7 @@ jobs:
         with:
           environment: production
           sourcemaps: './build/static/js'
+          set_commits: 'auto'
+          version: ${{ steps.get_version.outputs.VERSION }}
+          version_prefix: 'v'
+      - uses: actions/checkout@v2
