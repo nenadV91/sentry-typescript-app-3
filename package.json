@@ -1,6 +1,6 @@
 {
   "name": "my-app-3",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": true,
   "dependencies": {
     "@sentry/react": "^6.12.0",
