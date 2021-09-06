@@ -50,4 +50,3 @@ jobs:
         with:
           environment: production
           sourcemaps: './build/static/js'
-          version: sentry-typescript-app-3@${{ steps.get_version.outputs.VERSION }}
