@@ -10,7 +10,6 @@ import { version } from '../package.json'
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
   integrations: [new Integrations.BrowserTracing()],
-  release: `sentry-typescript-app-3@${version}`,
 
   // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
