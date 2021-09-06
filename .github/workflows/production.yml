@@ -50,6 +50,4 @@ jobs:
         with:
           environment: production
           sourcemaps: './build/static/js'
-          ignore_missing: true
-          set_commits: 'auto'
-          version: ${{ steps.get_version.outputs.VERSION }}
+
