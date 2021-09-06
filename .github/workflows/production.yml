@@ -50,4 +50,4 @@ jobs:
         with:
           environment: production
           sourcemaps: './build/static/js'
-
+          version: ${{ steps.get_version.outputs.VERSION }}
